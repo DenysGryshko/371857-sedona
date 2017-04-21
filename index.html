@@ -1,12 +1,183 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title> Sedona-tourism </title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <div clss="logo">
+            <img src="img/logo.png" width="138" height="70"
+            alt="City of Sedona">
+            <!--тоесть здесь это просто картинка, а на остальных страницах
+          сайта это ссылка на главную? -->
+          </div>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <!--у вебинаре о фотошопе было скзано что основную картинку Седоны нужно
+    разбить на 2 или больше частей, я решил на две (это я так понял это зависит
+     от метода постоения сетки и я пока не знаю сколько элементов делать)-->
+    <div class="main-image-1">
+      <img src="img/index-1.jpg" width="1200" height="508"
+      alt="Beautiful Sedona">
+    </div>
+    <div class="main-image-2">
+      <img src="img/index-2.png" width="1200" height="57"
+      alt="Beautiful Sedona">
+    </div>
+    <section class="motto">
+        <p class="main-motto"> Седона - небольшой городок в Аризоне,
+          заслуживающий большего!
+      <span class="reasons">Рассмотрим 5 причин, по которым Седона круче,
+        чем Гранд каньйон!</span>
+        </p>
+    </section>
+    <section class="adventures">
+      <div class="adventures-discription">
+        <h2 class="label"> Настоящий городок </h2>
+        <span class="number white">  №1 </span>
+        <p class="text white">  Седона - не аттракцион для туристов, там течет своя жизнь </p>
+        <!--я только не пойму как сделать перенос строки? в теге "р"...
+          или это все делается с помощью CSS (задая ширину, и размер шрифта)?-->
+      </div>
+      <div class="adventures-image">
+        <img src="img/view1.jpg" width="800" height="401"
+        alt="Sedona-view">
+      </div>
+    </section>
+    <section class="features">
+      <div class="features-item">
+        <div class="features-img1">
+          <!--Они же пустые верно? (картинку в CSS вставим...) -->
+        </div>
+        <b class="subtitle"> Жилье </b>
+        <p>
+          Рекомендуем пожить в настоящем мотеле, все как в кино!
+        </p>
+      </div>
+      <div class="features-item">
+        <div class="features-img2">
+        </div>
+        <b class="subtitle"> Еда </b>
+        <p>
+          Всегда заказывайте фирменный бургер вы не разочаруетесь!
+        </p>
+      </div>
+      <div class="features-item">
+        <div class="features-img2">
+        </div>
+        <b class="subtitle"> Сувениры </b>
+        <p>
+          Не только китайского, но и месного производства!
+        </p>
+      </div>
+    </section>
+    <section class="adventures">
+      <div class="adventures-image">
+        <img src="img/view2.jpg" width="800" height="400"
+        alt="Sedona-view">
+      </div>
+      <div class="adventures-discription">
+        <h2 class="label"> Там есть  мост Дьявола </h2>
+        <span class="number white"> №2 </span>
+        <p class="text white">  Да, по нему можна пройти! Если конечно вы
+          осмелитись </p>
+      </div>
+    </section>
+    <section class="adveture-block">
+      <div class="adveture-item">
+        <h2 class="subtitle"> Небольшая площадь </h2>
+        <span class="number black"> №3 </span>
+        <p class="text black">  Все достопримечательности находятся очень
+          близко </p>
+      </div>
+      <div class="adveture-item">
+        <h2 class="subtitle"> Красивая дорога </h2>
+        <span class="number black"> №4 </span>
+        <p class="text black"> Ехать в Седону из Лас-Вегаса совсем
+        не скучно! </p>
+      </div>
+      <div class="adveture-item">
+        <h2 class="subtitle"> Мало туристов </h2>
+        <span class="number black"> №5 </span>
+        <p class="text black"> Большинство едут в Гранд каньйон и
+          толпится там </p>
+      </div>
+    </section>
+    <section class="question">
+      <p class="question-headline"> Заинтересовались?
+      <span class="question-description"> Укажите предполагаемые даты поездки
+        и мы покажем Вам лучшие предложения гостиниц в Седоне </span>
+      </p>
+    </section>
+    <section class="form-and-map">
+      <h2 class="form-title"> Поиск гостиницы в Седоне </h2>
+      <div class="form-block">
+        <form class="booking-form" method="get" action="<ссылка>">
+          <label for="arrival-date"> Дата заезда:
+            <input id="arrival-date" name="arrival" type="data"
+            value="2017-04-24">
+          </label>
+          <label for="departure-date"> Дата выезда:
+            <input id="departure-date" name="departure" type="data"
+            value="2017-07-04">
+          </label>
+        <!--с полем дети и взрослые не разобрался, я так понял
+      там нужно Java использовать (с Java еще не разбирался)
+      + type button я тоже не понял-->
+          <label for="adult"> Взрослые:
+            <button class="btn" type="button"> - </button>
+            <input id="adult" name="adult-number" type="number" min="0" max="20"
+            step="1" value="2">
+            <button class="btn-more" type="button"> + </button>
+          </label>
+          <label for="children"> Дети:
+            <button class="btn" type="button"> - </button>
+            <input id="children" name="children-number" type="number" min="0" max="20"
+            step="1" value="0">
+            <button class="btn" type="button"> + </button>
+          </label>
+          <input type="submit" name="btn-find" value="НАЙТИ"> <!--сдесь нужен
+          Сapslock? -->
+        </form>
+      </div>
+      <div class="map-container"></div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="teg">
+        <p> #VisitSedona </p>
+      </div>
+      <section class="footer-social">
+        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-you" href="#">Ютуб</a>
+      </section>
+      <section class="footer-copyright">
+        <p>Website by</p>
+        <a class="btn-html" href="https://htmlacademy.ru"> </a>
+      </section>
+    </div>
+  </footer>
   </body>
 </html>

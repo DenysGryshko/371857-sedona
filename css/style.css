@@ -1,3 +1,10 @@
+html,
+body {
+  min-width: 1122px;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 14px;
   line-height: 24px;
@@ -6,10 +13,145 @@ body {
   font-family: PT Sans;
   text-transform: uppercase;
 }
+
 h2 {
   font-size: 21px;
   line-height: 21px;
 }
+
 .subtitle {
   color: #000000;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main-navigation{
+  width: 1200px;
+  min-height: 75px;
+}
+
+.main-image-1 {
+  width: 1200px;
+  min-height: 508px;
+}
+
+.main-image-2 {
+  width: 1200px;
+  min-height: 57px;
+  margin-bottom: 62px;
+}
+
+.moto {
+  width: 615px;
+  min-height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
+
+.adventures-1  {
+  margin-bottom: 55px;
+}
+
+.adventures-discription {
+  float: left;
+  width: 400px;
+  min-height: 260px;
+}
+
+.adventures-image {
+  float: right;
+  width: 800px;
+  min-height: 260px;
+}
+
+.features {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float:left;
+  width: 400px;
+  min-height: 195px;
+}
+
+.adventures-discription: :nth-child(2) {
+  float: right;
+}
+
+.adventures-image: :nth-child(2) {
+  float: left;
+}
+
+.adveture-block {
+  margin-bottom: 55px;
+}
+
+.main-motto {
+  width: 640px;
+  min-height: 45px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 35px;
+}
+
+.reasons {
+  width: 495px;
+  min-height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
+
+.question {
+width: 615px;
+min-height: 100px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 45px;
+}
+
+.form-and-map {
+  width: 595px;
+  min-height: 420px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-footer {
+  margin-top: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.footer-teg {
+  float: left;
+  width: 190px;
+  margin-right: 220px;
+  min-height: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 200px;
+  min-height: 60px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 240px;
+  min-height: 50px;
 }

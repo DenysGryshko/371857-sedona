@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title> Sedona-tourism </title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   <header class="main-header">
-    <div class="container clearfix">
+    <div class="container">
       <nav class="main-navigation">
         <ul>
           <li>
@@ -33,22 +34,18 @@
     <!--у вебинаре о фотошопе было скзано что основную картинку Седоны нужно
     разбить на 2 или больше частей, я решил на две (это я так понял это зависит
      от метода постоения сетки и я пока не знаю сколько элементов делать)-->
-    <div class="main-image-1">
-      <img src="img/index-1.jpg" width="1200" height="508"
-      alt="Beautiful Sedona">
+    <div class="main-images">
+       <h2 class="title">Sedona</h2>
+       <div class="white-mask"></div>
     </div>
-    <div class="main-image-2">
-      <img src="img/index-2.png" width="1200" height="57"
-      alt="Beautiful Sedona">
-    </div>
-    <section class="motto">
-        <p class="main-motto"> Седона - небольшой городок в Аризоне,
+    <section class="main-title">
+        <p class="main-title-1"> Седона - небольшой городок в Аризоне,
           заслуживающий большего! </p>
-        <p class="reasons">Рассмотрим 5 причин, по которым Седона круче,
+        <p class="main-title-2">Рассмотрим 5 причин, по которым Седона круче,
         чем Гранд каньйон!
         </p>
     </section>
-    <section class="adventures-2 clearfix">
+    <section class="adventures-1">
       <div class="adventures-discription">
         <h2 class="label"> Настоящий городок </h2>
         <span class="number white">  №1 </span>
@@ -56,12 +53,10 @@
         <!--я только не пойму как сделать перенос строки? в теге "р"...
           или это все делается с помощью CSS (задая ширину, и размер шрифта)?-->
       </div>
-      <div class="adventures-image">
-        <img src="img/view1.jpg" width="800" height="401"
-        alt="Sedona-view">
+      <div class="adventures-image-1">
       </div>
     </section>
-    <section class="features clearfix">
+    <section class="features">
       <div class="features-item">
         <div class="features-img1">
         </div>
@@ -87,10 +82,8 @@
         </p>
       </div>
     </section>
-    <section class="adventures-2 clearfix">
-      <div class="adventures-image">
-        <img src="img/view2.jpg" width="800" height="400"
-        alt="Sedona-view">
+    <section class="adventures-2">
+      <div class="adventures-image-2">
       </div>
       <div class="adventures-discription">
         <h2 class="label"> Там есть  мост Дьявола </h2>
@@ -99,20 +92,20 @@
           осмелитись </p>
       </div>
     </section>
-    <section class="adveture-block clearfix">
-      <div class="adventures-discription">
+    <section class="adveture-block">
+      <div class="adventures-discription grey">
         <h2 class="subtitle"> Небольшая площадь </h2>
         <span class="number black"> №3 </span>
         <p class="text black">  Все достопримечательности находятся очень
           близко </p>
       </div>
-      <div class="adventures-discription">
+      <div class="adventures-discription grey">
         <h2 class="subtitle"> Красивая дорога </h2>
         <span class="number black"> №4 </span>
         <p class="text black"> Ехать в Седону из Лас-Вегаса совсем
         не скучно! </p>
       </div>
-      <div class="adventures-discription">
+      <div class="adventures-discription grey">
         <h2 class="subtitle"> Мало туристов </h2>
         <span class="number black"> №5 </span>
         <p class="text black"> Большинство едут в Гранд каньйон и
@@ -121,8 +114,8 @@
     </section>
     <section class="question">
       <p class="question-headline"> Заинтересовались?
-      <span class="question-description"> Укажите предполагаемые даты поездки
-        и мы покажем Вам лучшие предложения гостиниц в Седоне </span>
+      <p class="question-description"> Укажите предполагаемые даты поездки
+        и мы покажем Вам лучшие предложения гостиниц в Седоне </p>
       </p>
     </section>
     <section class="form-and-map">
@@ -159,7 +152,8 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="container clearfix">
+    <div class="container">
+      <div class="main-footer-flex"> <!--Добавил обертку для флекса -->
       <div class="footer-teg">
         <p> #VisitSedona </p>
       </div>
@@ -171,6 +165,7 @@
       <section class="footer-copyright">
         <p>Website by</p>
         <a class="btn-html" href="https://htmlacademy.ru"> </a>
+      </div>
       </section>
     </div>
   </footer>

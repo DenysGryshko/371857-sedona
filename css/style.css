@@ -23,12 +23,6 @@ h2 {
   color: #000000;
 }
 
-.clearfix::after {
-  content: "";
-
-  display: table;
-  clear: both;
-}
 
 .container {
   width: 1200px;
@@ -36,122 +30,211 @@ h2 {
   padding: 0 40px;
 }
 
+
 .main-navigation{
   width: 1200px;
-  min-height: 75px;
+  min-height: 56px;
 }
 
-.main-image-1 {
+.main-navigation ul{
+  display: flex;
+  justify-content: space-around;
   width: 1200px;
-  min-height: 508px;
+  min-height: 56px;
+  box-sizing: border-box;
+  border: 2px solid black;
 }
 
-.main-image-2 {
-  width: 1200px;
-  min-height: 57px;
-  margin-bottom: 62px;
+.top-logo {
+  position: absolute;
+  width: 138px;
+  height: 70px;
+  right: auto;
+
+  z-index: 10; /* почему логотип не перекрывает главное изображение?*/
+}
+/* Это наверное потом подгоню
+.main-navigation ul li:first-child{
+  margin-right: 140px;
 }
 
-.moto {
-  width: 615px;
-  min-height: 100px;
-  margin-right: auto;
+.main-navigation ul li:nth-child(2){
+  margin-right: 380px;
+}
+
+.main-navigation ul li:nth-child(5){
   margin-left: auto;
-  margin-bottom: 55px;
+}
+*/
+.main-images {
+  width: 1200px;
+  height: 508px;
+  background-image: url(img/index.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.main-images .title {
+
+}
+
+.main-images .white-mask {
+  width: 1200px;
+  height: 57px;
+  display: inline-block;
+  background-image: url(img/index-2.png);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+}
+
+.main-title {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px solid black;
+  width: 1200px;
+  min-height: 216px;
+  box-sizing: border-box;
+}
+/* Не пойму почему следующие 2 блока не подтягиваются вверх?
+и почему они так центруются?*/
+.main-title-1 {
+  width: 500px;
+  min-height: 55px;
+  border: 2px solid black;
+}
+
+.main-title-2 {
+  width: 500px;
+  min-height: 20px;
+  border: 2px solid black;
 }
 
 .adventures-1  {
-  margin-bottom: 55px;
+  display: flex;
+  flex-shrink: 0;
+  width: 1200px;
+  min-height: 256px;
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
 .adventures-discription {
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Почему все равно есть или падинг или маргин сверху?*/
+  align-items: center;
+  flex-shrink: 0;
   width: 400px;
-  min-height: 260px;
+  height: 256px;
+
 }
 
-.adventures-image {
-  float: right;
-  width: 800px;
-  min-height: 260px;
+.adventures-image-1 {
+  width:800px;
+  height: 255px;
+  background-image: url(img/view-11.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
 }
 
 .features {
-  margin-bottom: 80px;
+  display: flex;
+  width: 1200px;
+  height: 330px;
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
 .features-item {
-  float:left;
+  display: flex;
+  flex-direction: column;
   width: 400px;
-  min-height: 195px;
+  height: 330px;;
 }
 
-.adventures-discription: :nth-child(2) {
-  float: right;
+.adventures-2  {
+  display: flex;
+  flex-shrink: 0;
+  width: 1200px;
+  min-height: 256px;
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
-.adventures-image: :nth-child(2) {
-  float: left;
+.adventures-image-2 {
+  width:800px;
+  height: 256px;
+  background-image: url(img/view-22.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
 }
 
 .adveture-block {
-  margin-bottom: 55px;
+  display: flex;
+  width: 1200px;
+  height: 256px;
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
-.main-motto {
-  width: 640px;
-  min-height: 45px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 35px;
-}
-
-.reasons {
-  width: 495px;
-  min-height: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 55px;
+.subtitle {
+  border: 2px solid black;
 }
 
 .question {
-width: 615px;
-min-height: 100px;
-margin-right: auto;
-margin-left: auto;
-margin-bottom: 45px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  width: 1200px;
+  min-height: 290px;
+  box-sizing: border-box;
 }
 
-.form-and-map {
+.question-headline {
+  width: 315px;
+  min-height: 30px;
+  border: 2px solid black;
+}
+
+.question-description {
+  width: 455px;
+  min-height: 50px;
+  border: 2px solid black;
+}
+
+.form-and-map { /* Форму тоже через флекс позиционировать? и где в html
+  расположить карту?*/
   width: 595px;
-  min-height: 420px;
+  min-height: 475px;
   margin-right: auto;
   margin-left: auto;
+  border: 2px solid black;
 }
 
-.main-footer {
-  margin-top: 80px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 70px;
-  padding-right: 70px;
+.main-footer-flex {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 2px solid black;
+  width: 1200px;
+  min-height: 120px;
+}
+
+.footer-teg, .footer-social, .footer-copyright {
+  height: 60px;
 }
 
 .footer-teg {
-  float: left;
-  width: 190px;
-  margin-right: 220px;
-  min-height: 90px;
+  width: 140px;
+  margin-left: 130px;
+  margin-right: 250px;
+
 }
 
 .footer-social {
-  float: left;
-  width: 200px;
-  min-height: 60px;
+  width: 140px;
+  margin-right: 220px;
 }
 
 .footer-copyright {
-  float: right;
-  width: 240px;
-  min-height: 50px;
+  width: 200px;
+  margin-right: auto;
 }

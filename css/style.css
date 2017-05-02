@@ -9,15 +9,11 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #333333;
-  font-weight: regular;
+  font-weight: bold;
   font-family: PT Sans;
   text-transform: uppercase;
 }
 
-h2 {
-  font-size: 21px;
-  line-height: 21px;
-}
 
 .subtitle {
   color: #000000;
@@ -30,59 +26,77 @@ h2 {
   padding: 0 40px;
 }
 
+.main-header {
+
+}
 
 .main-navigation{
   width: 1200px;
   min-height: 56px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .main-navigation ul{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 1200px;
-  min-height: 56px;
+  padding: 15px 0;
+  margin: 0;
+  list-style: none;
   box-sizing: border-box;
-  border: 2px solid black;
 }
 
-.top-logo {
-  position: absolute;
-  width: 138px;
-  height: 70px;
-  right: auto;
-
-  z-index: 10; /* почему логотип не перекрывает главное изображение?*/
+.main-navigation ul li a{
+  width: 105px;
+  min-height: 26px;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
 }
-/* Это наверное потом подгоню
+
+
 .main-navigation ul li:first-child{
-  margin-right: 140px;
+  margin-left: 70px;
+  margin-right: 137px;
 }
 
 .main-navigation ul li:nth-child(2){
   margin-right: 380px;
 }
 
-.main-navigation ul li:nth-child(5){
-  margin-left: auto;
+.main-navigation ul li:nth-child(3){
+  margin-right: 145px;
 }
-*/
+
+
+.top-logo {
+  position: absolute;
+  width: 138px;
+  min-height: 70px;
+  right: 531px;
+  top: 0x;
+  z-index: 10;
+}
+
 .main-images {
   width: 1200px;
-  height: 508px;
-  background-image: url(img/index.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
-  border: 2px solid black;
-  box-sizing: border-box;
-}
-
-.main-images .title {
-
+  min-height: 508px;
+  background: url(../img/index-main.jpg);
+  position: relative;
 }
 
 .main-images .white-mask {
   width: 1200px;
-  height: 57px;
-  display: inline-block;
-  background-image: url(img/index-2.png);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+  min-height: 57px;
+  background-image: url(../img/index-2.png);
+  position: absolute;
+  bottom: 0;
 }
 
 .main-title {
@@ -90,23 +104,32 @@ h2 {
   flex-shrink: 0;
   flex-direction: column;
   justify-content: flex-start;
-  border: 2px solid black;
+  align-items: center;
+  background-color: #ffffff;
   width: 1200px;
   min-height: 216px;
-  box-sizing: border-box;
 }
-/* Не пойму почему следующие 2 блока не подтягиваются вверх?
-и почему они так центруются?*/
+
 .main-title-1 {
   width: 500px;
-  min-height: 55px;
-  border: 2px solid black;
+  margin-top: 60px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  min-height: 26px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .main-title-2 {
   width: 500px;
-  min-height: 20px;
-  border: 2px solid black;
+  margin-top: 30px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 26px;
+  min-height: 26px;
+  font-weight: normal;
+  text-align: center;
 }
 
 .adventures-1  {
@@ -114,40 +137,120 @@ h2 {
   flex-shrink: 0;
   width: 1200px;
   min-height: 256px;
-  border: 2px solid black;
   box-sizing: border-box;
 }
 
 .adventures-discription {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Почему все равно есть или падинг или маргин сверху?*/
+  justify-content: flex-start;
   align-items: center;
   flex-shrink: 0;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
+  background-color: #81b3d2;
+}
 
+.label-adventures {
+  width: 400px;
+  min-height: 90px;
+  margin: 0px;
+  padding-top: 48px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.number-adventures {
+  width: 400px;
+  min-height: 40px;
+  margin: 0px;
+  padding-top: 19px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.text-adventures {
+  width: 285px;
+  min-height: 126px;
+  margin: 0px;
+  padding-top: 27px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
 }
 
 .adventures-image-1 {
   width:800px;
-  height: 255px;
-  background-image: url(img/view-11.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+  min-height: 255px;
+  background-image: url(../img/view-11.jpg);
 }
 
 .features {
   display: flex;
   width: 1200px;
-  height: 330px;
-  border: 2px solid black;
+  min-height: 330px;
+  background: #ffffff;
   box-sizing: border-box;
 }
 
 .features-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 400px;
-  height: 330px;;
+  min-height: 330px;
+
+}
+
+.features-img1, .features-img2, .features-img3 {
+  width: 400px;
+  min-height: 132px;
+}
+
+.features-img1 {
+  background: #ffffff url(../img/building.png); /* не могу 1 картинку сделать*/
+}
+
+.features-img2 {
+  background: #ffffff url(../img/burger.png); /* не могу 1 картинку сделать*/
+}
+
+.features-img3 {
+  background: #ffffff url(../img/gift.png); /* не могу 1 картинку сделать*/
+}
+
+.subtitle {
+    width: 400px;
+    min-height: 50px;
+    margin: 0px;
+    padding-top: 29px;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+  }
+
+.features-motto {
+  width: 260px;
+  min-height: 148px;
+  margin: 0px;
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
 }
 
 .adventures-2  {
@@ -155,49 +258,64 @@ h2 {
   flex-shrink: 0;
   width: 1200px;
   min-height: 256px;
-  border: 2px solid black;
   box-sizing: border-box;
 }
 
 .adventures-image-2 {
   width:800px;
-  height: 256px;
-  background-image: url(img/view-22.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+  min-height: 256px;
+  background-image: url(../img/view-22.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
 }
 
 .adveture-block {
   display: flex;
   width: 1200px;
-  height: 256px;
-  border: 2px solid black;
+  min-height: 256px;
   box-sizing: border-box;
 }
 
-.subtitle {
-  border: 2px solid black;
+.grey {
+    background: #eeeeee;
+}
+
+.black {
+  color: #000000;
 }
 
 .question {
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  border: 2px solid black;
+  background-color: #ffffff;
   width: 1200px;
-  min-height: 290px;
+  min-height: 291px;
   box-sizing: border-box;
 }
 
 .question-headline {
-  width: 315px;
+  width: 305px;
+  margin-top: 55px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
   min-height: 30px;
-  border: 2px solid black;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .question-description {
-  width: 455px;
-  min-height: 50px;
-  border: 2px solid black;
+  width: 445px;
+  margin-top: 30px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  min-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .form-and-map { /* Форму тоже через флекс позиционировать? и где в html

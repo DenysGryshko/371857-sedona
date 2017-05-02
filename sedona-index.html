@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> Sedona-tourism </title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,32 +11,28 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
+        <a class="top-logo" href="#">
+          <img src="img/logo.png" width="138" height="70" alt="City of Sedona">
+        </a>
         <ul>
           <li>
-            <a href="#">Информация</a>
+            <a href="#" class="menu-point">Информация</a>
           </li>
           <li>
-            <a href="#">Фото и видео</a>
-          </li>
-          <a class="top-logo">
-            <img src="img/logo.png" width="138" height="70" alt="City of Sedona">
-          </a>
-          <li>
-            <a href="#">Карта штата</a>
+            <a href="#" class="menu-point">Фото и видео</a>
           </li>
           <li>
-            <a href="#">Гостиницы</a>
+            <a href="#" class="menu-point">Карта штата</a>
+          </li>
+          <li>
+            <a href="#" class="menu-point">Гостиницы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="container">
-    <!--у вебинаре о фотошопе было скзано что основную картинку Седоны нужно
-    разбить на 2 или больше частей, я решил на две (это я так понял это зависит
-     от метода постоения сетки и я пока не знаю сколько элементов делать)-->
     <div class="main-images">
-       <h2 class="title">Sedona</h2>
        <div class="white-mask"></div>
     </div>
     <section class="main-title">
@@ -47,11 +44,9 @@
     </section>
     <section class="adventures-1">
       <div class="adventures-discription">
-        <h2 class="label"> Настоящий городок </h2>
-        <span class="number white">  №1 </span>
-        <p class="text white">  Седона - не аттракцион для туристов, там течет своя жизнь </p>
-        <!--я только не пойму как сделать перенос строки? в теге "р"...
-          или это все делается с помощью CSS (задая ширину, и размер шрифта)?-->
+        <h2 class="label-adventures white"> Настоящий городок </h2>
+        <span class="number-adventures white">  №1 </span>
+        <p class="text-adventures white">  Седона - не аттракцион для туристов, там течет своя жизнь </p>
       </div>
       <div class="adventures-image-1">
       </div>
@@ -61,7 +56,7 @@
         <div class="features-img1">
         </div>
         <b class="subtitle"> Жилье </b>
-        <p>
+        <p class="features-motto">
           Рекомендуем пожить в настоящем мотеле, все как в кино!
         </p>
       </div>
@@ -69,15 +64,15 @@
         <div class="features-img2">
         </div>
         <b class="subtitle"> Еда </b>
-        <p>
+        <p class="features-motto">
           Всегда заказывайте фирменный бургер вы не разочаруетесь!
         </p>
       </div>
       <div class="features-item">
-        <div class="features-img2">
+        <div class="features-img3">
         </div>
         <b class="subtitle"> Сувениры </b>
-        <p>
+        <p class="features-motto">
           Не только китайского, но и месного производства!
         </p>
       </div>
@@ -86,35 +81,35 @@
       <div class="adventures-image-2">
       </div>
       <div class="adventures-discription">
-        <h2 class="label"> Там есть  мост Дьявола </h2>
-        <span class="number white"> №2 </span>
-        <p class="text white">  Да, по нему можна пройти! Если конечно вы
+        <h2 class="label-adventures white"> Там есть  мост Дьявола </h2>
+        <span class="number-adventures white"> №2 </span>
+        <p class="text-adventures white">  Да, по нему можна пройти! Если конечно вы
           осмелитись </p>
       </div>
     </section>
     <section class="adveture-block">
       <div class="adventures-discription grey">
-        <h2 class="subtitle"> Небольшая площадь </h2>
-        <span class="number black"> №3 </span>
-        <p class="text black">  Все достопримечательности находятся очень
+        <h2 class="label-adventures black"> Небольшая площадь </h2>
+        <span class="number-adventures black"> №3 </span>
+        <p class="text-adventures black">  Все достопримечательности находятся очень
           близко </p>
       </div>
       <div class="adventures-discription grey">
-        <h2 class="subtitle"> Красивая дорога </h2>
-        <span class="number black"> №4 </span>
-        <p class="text black"> Ехать в Седону из Лас-Вегаса совсем
+        <h2 class="label-adventures black"> Красивая дорога </h2>
+        <span class="number-adventures black"> №4 </span>
+        <p class="text-adventures black"> Ехать в Седону из Лас-Вегаса совсем
         не скучно! </p>
       </div>
       <div class="adventures-discription grey">
-        <h2 class="subtitle"> Мало туристов </h2>
-        <span class="number black"> №5 </span>
-        <p class="text black"> Большинство едут в Гранд каньйон и
+        <h2 class="label-adventures black"> Мало туристов </h2>
+        <span class="number-adventures black"> №5 </span>
+        <p class="text-adventures black"> Большинство едут в Гранд каньйон и
           толпится там </p>
       </div>
     </section>
     <section class="question">
       <p class="question-headline"> Заинтересовались?
-      <p class="question-description"> Укажите предполагаемые даты поездки
+      <p class="question-description"> Укажите предполагаемые даты поездки<br>
         и мы покажем Вам лучшие предложения гостиниц в Седоне </p>
       </p>
     </section>

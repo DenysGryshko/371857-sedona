@@ -50,7 +50,7 @@ body {
   box-sizing: border-box;
 }
 
-.main-navigation ul li a{
+.menu-point{
   width: 105px;
   min-height: 26px;
   font-size: 14px;
@@ -61,19 +61,18 @@ body {
 }
 
 
-.main-navigation ul li:first-child{
-  margin-left: 70px;
-  margin-right: 137px;
+.first{
+  margin-left: 71px;
+  margin-right: 148px
 }
 
-.main-navigation ul li:nth-child(2){
-  margin-right: 380px;
+.second{
+  margin-right: 389px;
 }
 
-.main-navigation ul li:nth-child(3){
-  margin-right: 145px;
+.third{
+  margin-right: 164px;
 }
-
 
 .top-logo {
   position: absolute;
@@ -108,26 +107,27 @@ body {
   background-color: #ffffff;
   width: 1200px;
   min-height: 216px;
+  padding-top: 60px;
+  box-sizing: border-box;
 }
 
 .main-title-1 {
-  width: 500px;
-  margin-top: 60px;
+  width: 605px;
+  margin: 0;
   padding: 0;
+  margin-bottom: 30px;
   font-size: 21px;
   line-height: 26px;
-  min-height: 26px;
   font-weight: bold;
   text-align: center;
 }
 
 .main-title-2 {
   width: 500px;
-  margin-top: 30px;
+  margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 26px;
-  min-height: 26px;
   font-weight: normal;
   text-align: center;
 }
@@ -148,14 +148,15 @@ body {
   flex-shrink: 0;
   width: 400px;
   min-height: 256px;
+  padding-top: 47px;
   background-color: #81b3d2;
+  box-sizing: border-box;
 }
 
 .label-adventures {
-  width: 400px;
-  min-height: 90px;
+  width: 305px;
   margin: 0px;
-  padding-top: 48px;
+  padding-bottom: 8px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -165,28 +166,48 @@ body {
 }
 
 .number-adventures {
-  width: 400px;
-  min-height: 40px;
+  position:relative;
+  width: 64px;
   margin: 0px;
-  padding-top: 19px;
+  padding-top: 16px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   text-align: center;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
+.number-adventures::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #8bb9d5; /*цвет мне только не нравится*/
+  top: 26px;
+  left: 8px;
+}
+
+.number-adventures::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #8bb9d5; /*цвет мне только не нравится*/
+  top: 26px;
+  left: 49px;
+}
 
 .text-adventures {
-  width: 285px;
-  min-height: 126px;
+  width: 310px;
   margin: 0px;
-  padding-top: 27px;
+  padding-top: 21px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   text-align: center;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .adventures-image-1 {
@@ -207,43 +228,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 400px;
   min-height: 330px;
+  padding-top: 132px;
+  box-sizing: border-box;
 
 }
 
-.features-img1, .features-img2, .features-img3 {
-  width: 400px;
-  min-height: 132px;
+.features-img {
+  position: absolute;
+  width: 75px;
+  min-height: 76px;
+  top: 62px;
 }
 
-.features-img1 {
-  background: #ffffff url(../img/building.png); /* не могу 1 картинку сделать*/
+.building {
+  background: #ffffff url(../img/building.png) no-repeat;
 }
 
-.features-img2 {
-  background: #ffffff url(../img/burger.png); /* не могу 1 картинку сделать*/
+.burger {
+  background: #ffffff url(../img/burger.png) no-repeat;
 }
 
-.features-img3 {
-  background: #ffffff url(../img/gift.png); /* не могу 1 картинку сделать*/
+.gift {
+  background: #ffffff url(../img/gift.png) no-repeat;
+  top: 55px;
+  right: 155px;
 }
 
 .subtitle {
-    width: 400px;
-    min-height: 50px;
+    width: 305px;
     margin: 0px;
-    padding-top: 29px;
+    padding-top: 30px;
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
     text-align: center;
     color: #000000;
-  }
+    box-sizing: border-box;
+}
 
 .features-motto {
-  width: 260px;
-  min-height: 148px;
+  width: 305px;
   margin: 0px;
   padding-top: 25px;
   font-size: 14px;
@@ -251,6 +278,7 @@ body {
   font-weight: normal;
   text-align: center;
   color: #000000;
+  box-sizing: border-box;
 }
 
 .adventures-2  {
@@ -295,24 +323,23 @@ body {
 }
 
 .question-headline {
-  width: 305px;
+  width: 475px;
   margin-top: 55px;
+  margin-bottom: 26px;
   padding: 0;
   font-size: 30px;
   line-height: 30px;
-  min-height: 30px;
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
 }
 
 .question-description {
-  width: 445px;
-  margin-top: 30px;
+  width: 475px;
+  margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
-  min-height: 24px;
   font-weight: normal;
   text-align: center;
   box-sizing: border-box;

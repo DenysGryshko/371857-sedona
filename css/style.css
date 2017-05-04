@@ -183,7 +183,7 @@ body {
   position: absolute;
   width: 9px;
   height: 2px;
-  background: #8bb9d5; /*цвет мне только не нравится*/
+  background: #bcd6e7;
   top: 26px;
   left: 8px;
 }
@@ -193,7 +193,27 @@ body {
   position: absolute;
   width: 9px;
   height: 2px;
-  background: #8bb9d5; /*цвет мне только не нравится*/
+  background: #bcd6e7;
+  top: 26px;
+  left: 49px;
+}
+
+.black::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #979797; /*цвет мне только не нравится*/
+  top: 26px;
+  left: 8px;
+}
+
+.black::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #979797; /*цвет мне только не нравится*/
   top: 26px;
   left: 49px;
 }
@@ -325,7 +345,7 @@ body {
 .question-headline {
   width: 475px;
   margin-top: 55px;
-  margin-bottom: 26px;
+  margin-bottom: 12px;
   padding: 0;
   font-size: 30px;
   line-height: 30px;
@@ -336,7 +356,7 @@ body {
 
 .question-description {
   width: 475px;
-  margin: 0;
+  margin-bottom: 46px;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
@@ -345,38 +365,158 @@ body {
   box-sizing: border-box;
 }
 
-.form-and-map { /* Форму тоже через флекс позиционировать? и где в html
-  расположить карту?*/
-  width: 595px;
-  min-height: 475px;
-  margin-right: auto;
-  margin-left: auto;
-  border: 2px solid black;
+.form-title {
+  width: 567px;
+  min-height: 86px;
+  padding-top: 30px;
+  padding-left: 140px;
+  background-color: #766357;
+  box-sizing: border-box;
 }
+
+.form-title p {
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-and-map {
+  width: 1200px;
+  min-height: 473px;
+  padding-left: 316px;
+  background-image: url(../img/map.jpg);
+  box-sizing: border-box;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 567px;
+  min-height: 395px;
+  background-color: #ffffff;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 460px;
+  min-height: 38px;
+  margin-top: 54px;
+  padding-left: 4px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.row:nth-child(2) {
+  margin-top: 30px;
+}
+
+.row:nth-child(3) {
+  margin-top: 30px;
+}
+
+input[type="text"] {
+  display: block;
+  width: 346px;
+  min-height: 38px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="number"]::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/minus.png);
+  top: 0;
+  left: 0; /* Не получается кнопки нормально розместить с псевдоэлементами */
+}
+
+input[type="submit"] {
+  width: 458px;
+  min-height: 58px;
+  margin-top: 48px;
+  border: none;
+  background-color: #81b3d2;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-sizing: border-box;
+
+}
+.btn {
+  width: 38px;
+  min-height: 38px;
+  margin-left: 16px;
+  font-size: 0;
+
+  box-sizing: border-box;
+}
+
+
 
 .main-footer-flex {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  border: 2px solid black;
+  background-color: #faf7f0;
   width: 1200px;
   min-height: 120px;
 }
 
-.footer-teg, .footer-social, .footer-copyright {
-  height: 60px;
-}
-
 .footer-teg {
   width: 140px;
-  margin-left: 130px;
-  margin-right: 250px;
+  margin-left: 133px;
+  margin-right: 249px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+
 
 }
 
 .footer-social {
-  width: 140px;
-  margin-right: 220px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 215px;
+  margin-right: 166px;
+  font-size: 0;
+}
+
+.social-btn {
+  display: block;
+  width: 46px;
+  height: 48px;
+  margin: 0 3px;
+  background-color: #81b3d2;
+  box-sizing: border-box;
+
 }
 
 .footer-copyright {

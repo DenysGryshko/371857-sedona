@@ -312,7 +312,7 @@ body {
 .adventures-image-2 {
   width:800px;
   min-height: 256px;
-  background-image: url(../img/view-22.jpg);/* НЕ ОТОБРАЖАЕТСЯ КАРТИНККИ =(  )*/
+  background-image: url(../img/view-22.jpg);
 }
 
 .adveture-block {
@@ -496,8 +496,6 @@ input[type="submit"] {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-
-
 }
 
 .footer-social {
@@ -505,8 +503,10 @@ input[type="submit"] {
   justify-content: flex-start;
   align-items: center;
   width: 215px;
+  min-height: 48px;
   margin-right: 166px;
   font-size: 0;
+  box-sizing: border-box;
 }
 
 .social-btn {
@@ -514,12 +514,251 @@ input[type="submit"] {
   width: 46px;
   height: 48px;
   margin: 0 3px;
-  background-color: #81b3d2;
+  background: #81b3d2 url("../img/sprite.png") no-repeat center;
   box-sizing: border-box;
+}
 
+.social-btn-tw {
+   background-position: 10px 10px;
 }
 
 .footer-copyright {
   width: 200px;
   margin-right: auto;
 }
+
+/* hotel SEDONA */
+
+.main-images-hotel {
+  background-image: url(../img/hotel-main-2.jpg);
+  width: 1200px;
+  min-height: 217px;
+  padding-top: 27px;
+  padding-left: 72px;
+  box-sizing: border-box;
+}
+
+.hotel-form {
+  display: flex;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.title-form {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.column-form  {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.infrastructure {
+  margin-right: 53px;
+}
+
+.accommodation{
+  margin-right: 287px;
+}
+
+
+
+
+
+
+/* сложная форма */
+
+
+
+
+
+
+
+input[type="checkbox"] {
+  display:none;
+}
+
+.checkbox-name {
+  padding-left: 41px;
+  margin-bottom: 25px;
+}
+
+.form-result {
+  width: 1200px;
+  min-height: 540px;
+  background-color: #fefefe;
+}
+
+.search {
+  display: flex;
+  align-items: baseline;
+  width: 1200px;
+  min-height: 87px;
+  padding-left: 71px;
+  padding-top: 29px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.found {
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.header-number {
+  margin-right: 48px;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #000000;
+  margin-right: 40px;
+}
+
+.price {
+  color: #81b3d2;
+  margin-right: 33px;
+}
+
+.type, .rating {
+  color: #000000;
+  border-bottom: 1px dotted #81b3d2;
+  opacity: 0.3;
+  line-height: 12px;
+  margin-right: 33px;
+}
+
+.hotels {
+  width: 1200px;
+  min-height: 454px;
+  position: relative;
+}
+
+.hotel-item {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  min-height: 151px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.hotel-image {
+  margin-left: 72px;
+  margin-right: 30px;
+  width: 135px;
+  height: 90px;
+  background-image: url(../img/hotel-1.jpg);
+  box-sizing: border-box;
+}
+
+.desert {
+  background-image: url(../img/hotel-2.jpg);
+}
+
+.villas {
+  background-image: url(../img/hotel-3.jpg);
+}
+
+.hotel-features {
+  display: flex;
+  flex-direction: column;
+  width: 545px;
+  min-height: 95px;
+  margin-right: 235px;
+  box-sizing: border-box;
+}
+
+.hotel-name {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.features-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.hotel-type, .hotel-price {
+  width: 100px;
+  line-height: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-type {
+  margin-right: 16px;
+}
+
+.hotel-links {
+  display: flex;
+  justify-content: space-between;
+  width: 258px;
+  min-height: 27px;
+}
+
+.more-information, .booking {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 3px 17px;
+}
+
+.more-information {
+  background-color: #81b3d2;
+}
+
+.booking {
+  background-color: #766357;
+}
+
+.rating-value {
+  width: 111px;
+  min-height: 27px;
+  text-align: center;
+  color: rgb(102, 102, 102);
+  background-color: #f2f2f2;
+  margin-top: 64px;
+  box-sizing: border-box;
+}
+ /* Звезды решил псевдоэлементами сделать
+.hotels::after {
+  position: absolute;
+  width: 89px;
+  height: 17px;
+  background-image: url(../img/four-star.png);
+  top:0;
+  left: 0;
+}
+
+.star-3 {
+  width: 65px;
+  height: 17px;
+  background-image: url(../img/three-star.png);
+}
+
+.star-2 {
+  width: 42px;
+  height: 17px;
+  background-image: url(../img/two-star.png);
+}
+ */

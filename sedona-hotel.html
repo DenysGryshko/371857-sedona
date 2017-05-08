@@ -36,21 +36,21 @@
         <form class="hotel-form" action="ссылка" method="get">
           <div class="column-form infrastructure">
           <h2 class="title-form">Инфраструктура:</h2>
-          <label class="checkbox-name" for="infrastructure-1"> Басейн </label>
-          <input id="infrastructure-1" name="pool" type="checkbox" checked>
-          <label class="checkbox-name" for="infrastructure-2"> Парковка</label>
-          <input id="infrastructure-2" name="parking" type="checkbox">
-          <label class="checkbox-name" for="infrastructure-3"> Wi-fi </label>
-          <input id="infrastructure-3" name="wi-fi" type="checkbox">
+          <label class="checkbox-name checked" for="infrastructure-1"> Басейн </label>
+          <input class="checkbox-input" id="infrastructure-1" name="pool" type="checkbox" checked>
+          <label class="checkbox-name no-checked" for="infrastructure-2"> Парковка</label>
+          <input class="checkbox-input" id="infrastructure-2" name="parking" type="checkbox">
+          <label class="checkbox-name no-checked" for="infrastructure-3"> Wi-fi </label>
+          <input class="checkbox-input" id="infrastructure-3" name="wi-fi" type="checkbox">
           </div>
           <div class="column-form accommodation">
           <h2 class="title-form">Тип жилья:</h2>
-          <label class="checkbox-name" for="accommodation-form-1"> Гостиница </label>
-          <input id="accommodation-form-1" name="hotel" type="checkbox" checked>
-          <label class="checkbox-name" for="accommodation-form-2"> Мотель </label>
-          <input id="accommodation-form-2" name="motel" type="checkbox" checked>
-          <label class="checkbox-name" for="accommodation-form-3"> Апартаменты </label>
-          <input id="accommodation-form-3" name="apartments" type="checkbox" checked>
+          <label class="checkbox-name checked" for="accommodation-form-1"> Гостиница </label>
+          <input class="checkbox-input" id="accommodation-form-1" name="hotel" type="checkbox" checked>
+          <label class="checkbox-name checked" for="accommodation-form-2"> Мотель </label>
+          <input class="checkbox-input" id="accommodation-form-2" name="motel" type="checkbox" checked>
+          <label class="checkbox-name checked" class="checkbox-name" for="accommodation-form-3"> Апартаменты </label>
+          <input class="checkbox-input" id="accommodation-form-3" name="apartments" type="checkbox" checked>
           </div>
           <div class="column-form price">
           <h2 class="title-form">Стоимость в сутки (р):</h2>
@@ -63,8 +63,8 @@
     <section class="form-result">
     <div class="search">
       <h2 class="found header-number"> Найдено: 3 </h2>
-      <span class="sorting caption"> Сортировка: </span>
-      <span class="sorting price"> По цене </span>
+      <span class="caption"> Сортировка: </span>
+      <span class="sorting price active"> По цене </span>
       <span class="sorting type"> По типу </span>
       <span class="sorting rating"> По рейтингу: </span>
     </div>
@@ -89,8 +89,8 @@
         <div class="hotel-features">
           <h2 class="hotel-name"> Desert quail inn </h2>
           <div class="features-description">
-          <span class="hotel-type"> Мотель </span>
-          <span class="hotel-price"> от 3000 р.  </span>
+            <span class="hotel-type"> Мотель </span>
+            <span class="hotel-price"> от 3000 р.  </span>
           </div>
           <div class="hotel-links">
           <a class="more-information" href="#" > Подробнее </a>
@@ -118,7 +118,7 @@
   </main>
   <footer class="main-footer">
     <div class="container">
-      <div class="main-footer-flex"> <!--Добавил обертку для флекса -->
+      <div class="main-footer-flex second-footer"> <!--Добавил обертку для флекса -->
       <div class="footer-teg">
         <p> #VisitSedona </p>
       </div>

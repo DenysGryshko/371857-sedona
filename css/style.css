@@ -13,6 +13,191 @@ body {
   font-family: PT Sans;
   text-transform: uppercase;
 }
+.sprite {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-calendar {
+   width: 21px;
+   height: 22px;
+   background-position: -15px -15px;
+}
+
+.sprite-calendar-pointing {
+   width: 21px;
+   height: 22px;
+   background-position: -15px -67px;
+}
+
+.sprite-calendar-press {
+   width: 21px;
+   height: 22px;
+   background-position: -15px -119px;
+}
+
+.sprite-check {
+   width: 26px;
+   height: 22px;
+   background-position: -15px -171px;
+}
+
+.sprite-check-block {
+   width: 26px;
+   height: 22px;
+   background-position: -15px -223px;
+}
+
+.sprite-check-pointing {
+   width: 26px;
+   height: 22px;
+   background-position: -15px -275px;
+}
+
+.sprite-checkbox {
+   width: 22px;
+   height: 22px;
+   background-position: -15px -327px;
+}
+
+.sprite-checkbox-block {
+   width: 22px;
+   height: 22px;
+   background-position: -15px -379px;
+}
+
+.sprite-checkbox-pointing {
+   width: 22px;
+   height: 22px;
+   background-position: -15px -431px;
+}
+
+.sprite-fb {
+   width: 10px;
+   height: 19px;
+   background-position: -15px -483px;
+}
+
+.sprite-fb-press {
+   width: 10px;
+   height: 19px;
+   background-position: -15px -532px;
+}
+
+.sprite-html-academy {
+   width: 113px;
+   height: 39px;
+   background-position: -15px -581px;
+}
+
+.sprite-html-academy-pointing {
+   width: 113px;
+   height: 39px;
+   background-position: -15px -650px;
+}
+
+.sprite-html-academy-press {
+   width: 113px;
+   height: 39px;
+   background-position: -15px -719px;
+}
+
+.sprite-minus {
+   width: 12px;
+   height: 3px;
+   background-position: -15px -788px;
+}
+
+.sprite-minus-pointing {
+   width: 12px;
+   height: 3px;
+   background-position: -15px -821px;
+}
+
+.sprite-minus-press {
+   width: 12px;
+   height: 3px;
+   background-position: -15px -854px;
+}
+
+.sprite-plus {
+   width: 11px;
+   height: 11px;
+   background-position: -15px -887px;
+}
+
+.sprite-plus-pointing {
+   width: 11px;
+   height: 11px;
+   background-position: -15px -928px;
+}
+
+.sprite-plus-press {
+   width: 11px;
+   height: 11px;
+   background-position: -15px -969px;
+}
+
+.sprite-slider {
+   width: 20px;
+   height: 23px;
+   background-position: -15px -1010px;
+}
+
+.sprite-slider-pointing {
+   width: 20px;
+   height: 23px;
+   background-position: -15px -1063px;
+}
+
+.sprite-triangle {
+   width: 11px;
+   height: 10px;
+   background-position: -15px -1116px;
+}
+
+.sprite-triangle-pointing {
+   width: 11px;
+   height: 10px;
+   background-position: -15px -1156px;
+}
+
+.sprite-triangle-press {
+   width: 11px;
+   height: 10px;
+   background-position: -15px -1196px;
+}
+
+.sprite-twitter {
+   width: 17px;
+   height: 15px;
+   background-position: -15px -1236px;
+}
+
+.sprite-twitter-press {
+   width: 17px;
+   height: 15px;
+   background-position: -15px -1281px;
+}
+
+.sprite-youtube {
+   width: 20px;
+   height: 16px;
+   background-position: -15px -1326px;
+}
+
+.sprite-youtube-press {
+   width: 20px;
+   height: 16px;
+   background-position: -15px -1372px;
+}
+
+
+
+
+
+
 
 
 .subtitle {
@@ -194,26 +379,6 @@ body {
   width: 9px;
   height: 2px;
   background: #bcd6e7;
-  top: 26px;
-  left: 49px;
-}
-
-.black::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #979797; /*цвет мне только не нравится*/
-  top: 26px;
-  left: 8px;
-}
-
-.black::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #979797; /*цвет мне только не нравится*/
   top: 26px;
   left: 49px;
 }
@@ -423,10 +588,10 @@ body {
 }
 
 .row:nth-child(3) {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
-input[type="text"] {
+.calendar {
   display: block;
   width: 346px;
   min-height: 38px;
@@ -439,26 +604,104 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-input[type="number"] {
+.label {
   position: relative;
-  width: 38px;
-  height: 38px;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -357px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 22px;
+  background-position: -15px -15px;
+}
+
+.amount {
+  justify-content: flex-start;
+  position: relative;
+}
+
+.adult {
+  width: 75px;
+  min-height: 30px;
+  margin-right: 38px;
+  box-sizing: border-box;
+}
+
+.children {
+  width: 45px;
+  min-height: 30px;
+  margin-right: 26px;
+  box-sizing: border-box;
+}
+
+.counter {
+  display: flex;
+  width: 114px;
+  min-height: 38px;
+  background-color: #f2f2f2;
+  margin-right: 54px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.counter::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 3px;
+  background-position: -15px -788px;
+}
+
+.counter::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 90px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  background-position: -15px -887px;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
   padding: 0;
+  text-align: left;
+  background: none;
+  border: none;
+  width: 38px;
+  height: 38px;
 }
 
-input[type="number"]::before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/minus.png);
-  top: 0;
-  left: 0; /* Не получается кнопки нормально розместить с псевдоэлементами */
+.plus-minus {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: none;
+  border: none;
+  width: 38px;
+  height: 32px;
+  font-weight: bold;
 }
 
-input[type="submit"] {
+.find {
   width: 458px;
   min-height: 58px;
-  margin-top: 48px;
+  margin-top: 52px;
   border: none;
   background-color: #81b3d2;
   font-size: 21px;
@@ -467,18 +710,15 @@ input[type="submit"] {
   text-transform: uppercase;
   color: #ffffff;
   box-sizing: border-box;
-
 }
+
 .btn {
   width: 38px;
   min-height: 38px;
   margin-left: 16px;
   font-size: 0;
-
   box-sizing: border-box;
 }
-
-
 
 .main-footer-flex {
   display: flex;
@@ -500,7 +740,6 @@ input[type="submit"] {
 
 .footer-social {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   width: 215px;
   min-height: 48px;
@@ -510,21 +749,73 @@ input[type="submit"] {
 }
 
 .social-btn {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   width: 46px;
   height: 48px;
   margin: 0 3px;
-  background: #81b3d2 url("../img/sprite.png") no-repeat center;
+  background-color: #81b3d2;
+  position: relative;
   box-sizing: border-box;
 }
 
-.social-btn-tw {
-   background-position: 10px 10px;
+.social-btn::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+
+.social-btn-tw::before {
+  width: 17px;
+  height: 15px;
+  background-position: -15px -1236px;
+}
+
+.social-btn-fb::before {
+  width: 10px;
+  height: 19px;
+  background-position: -15px -483px;
+}
+
+.social-btn-you::before {
+  width: 20px;
+  height: 16px;
+  background-position: -15px -1326px;
 }
 
 .footer-copyright {
-  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 195px;
+  min-height: 50px;
   margin-right: auto;
+}
+
+.btn-html {
+  display: inline-block;
+  vertical-align: top;
+  width: 113px;
+  height: 39px;
+  background-color: #fcfcfb;
+  position: relative;
+}
+
+.btn-html::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 113px;
+  height: 39px;
+  background-image: url(../img/sprite.png);
+  background-position: -15px -581px;
+  background-repeat: no-repeat;
 }
 
 /* hotel SEDONA */
@@ -561,6 +852,7 @@ input[type="submit"] {
   width: 200px;
 }
 
+
 .infrastructure {
   margin-right: 53px;
 }
@@ -582,13 +874,47 @@ input[type="submit"] {
 
 
 
-input[type="checkbox"] {
+.checkbox-input {
   display:none;
 }
+
 
 .checkbox-name {
   padding-left: 41px;
   margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.checked {
+  position: relative;
+}
+
+.checked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -15px -171px;
+}
+
+.no-checked {
+  position: relative;
+}
+
+.no-checked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-position: -15px -327px;
 }
 
 .form-result {
@@ -605,7 +931,33 @@ input[type="checkbox"] {
   padding-left: 71px;
   padding-top: 29px;
   border-bottom: 1px solid #e5e5e5;
+  position: relative;
   box-sizing: border-box;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg);
+  top: 39px;
+  right: 73px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-position: -15px -1196px;
+}
+
+.search::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 96px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-position: -15px -1116px;
 }
 
 .found {
@@ -614,6 +966,14 @@ input[type="checkbox"] {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+}
+.caption {
+  width: 80px;
+  min-height: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  margin-right: 35px;
 }
 
 .header-number {
@@ -656,6 +1016,51 @@ input[type="checkbox"] {
   box-sizing: border-box;
 }
 
+.hotel-item:first-child: {
+  position: relative;
+}
+
+.hotel-item:first-child::after {
+  position: absolute;
+  content: "";
+  top: 29px;
+  right: 72px;
+  background-image: url(../img/four-star.png);
+  background-repeat: no-repeat;
+  width: 89px;
+  height: 17px;
+}
+
+.hotel-item:nth-child(2) {
+  position: relative;
+}
+
+.hotel-item:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: 29px;
+  right: 72px;
+  background-image: url(../img/three-star.png);
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 17px;
+}
+
+.hotel-item:nth-child(3) {
+  position: relative;
+}
+
+.hotel-item:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  top: 29px;
+  right: 72px;
+  background-image: url(../img/two-star.png);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 17px;
+}
+
 .hotel-image {
   margin-left: 72px;
   margin-right: 30px;
@@ -664,6 +1069,7 @@ input[type="checkbox"] {
   background-image: url(../img/hotel-1.jpg);
   box-sizing: border-box;
 }
+
 
 .desert {
   background-image: url(../img/hotel-2.jpg);
@@ -742,6 +1148,7 @@ input[type="checkbox"] {
 }
  /* Звезды решил псевдоэлементами сделать
 .hotels::after {
+
   position: absolute;
   width: 89px;
   height: 17px;
@@ -762,3 +1169,6 @@ input[type="checkbox"] {
   background-image: url(../img/two-star.png);
 }
  */
+ .second-footer {
+   background-color: #fefefe;
+ }

@@ -49,12 +49,6 @@ body {
    background-position: -15px -223px;
 }
 
-.sprite-check-pointing {
-   width: 26px;
-   height: 22px;
-   background-position: -15px -275px;
-}
-
 .sprite-checkbox {
    width: 22px;
    height: 22px;
@@ -67,22 +61,10 @@ body {
    background-position: -15px -379px;
 }
 
-.sprite-checkbox-pointing {
-   width: 22px;
-   height: 22px;
-   background-position: -15px -431px;
-}
-
 .sprite-fb {
    width: 10px;
    height: 19px;
    background-position: -15px -483px;
-}
-
-.sprite-fb-press {
-   width: 10px;
-   height: 19px;
-   background-position: -15px -532px;
 }
 
 .sprite-html-academy {
@@ -139,18 +121,6 @@ body {
    background-position: -15px -969px;
 }
 
-.sprite-slider {
-   width: 20px;
-   height: 23px;
-   background-position: -15px -1010px;
-}
-
-.sprite-slider-pointing {
-   width: 20px;
-   height: 23px;
-   background-position: -15px -1063px;
-}
-
 .sprite-triangle {
    width: 11px;
    height: 10px;
@@ -175,30 +145,11 @@ body {
    background-position: -15px -1236px;
 }
 
-.sprite-twitter-press {
-   width: 17px;
-   height: 15px;
-   background-position: -15px -1281px;
-}
-
 .sprite-youtube {
    width: 20px;
    height: 16px;
    background-position: -15px -1326px;
 }
-
-.sprite-youtube-press {
-   width: 20px;
-   height: 16px;
-   background-position: -15px -1372px;
-}
-
-
-
-
-
-
-
 
 .subtitle {
   color: #000000;
@@ -235,7 +186,7 @@ body {
   box-sizing: border-box;
 }
 
-.menu-point{
+.menu-point {
   width: 105px;
   min-height: 26px;
   font-size: 14px;
@@ -243,8 +194,20 @@ body {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  cursor: pointer;
 }
 
+.menu-point:hover {
+  color: #81b3d2;
+}
+
+.menu-point:active {
+  opacity: 0.3;
+}
+
+.menu-point.active:visited {
+  color: #766357;
+}
 
 .first{
   margin-left: 71px;
@@ -602,10 +565,22 @@ body {
   font-weight: bold;
   padding-left: 12px;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.calendar:hover {
+  background-color: #ebebeb;
+}
+
+.calendar:focus {
+  background-color: #ffffff;
+  outline: none;
+  border: 2px solid #ebebeb;
 }
 
 .label {
   position: relative;
+  cursor: pointer;
 }
 
 .label::before {
@@ -618,6 +593,19 @@ body {
   width: 21px;
   height: 22px;
   background-position: -15px -15px;
+  cursor: pointer;
+}
+
+.label:hover:before {
+  width: 21px;
+  height: 22px;
+  background-position: -15px -67px;
+}
+
+.label:active:before {
+  width: 21px;
+  height: 22px;
+  background-position: -15px -119px;
 }
 
 .amount {
@@ -661,6 +649,18 @@ body {
   background-position: -15px -788px;
 }
 
+.counter:hover:before {
+  width: 12px;
+  height: 3px;
+  background-position: -15px -821px;
+}
+
+.counter:active:before {
+  width: 12px;
+  height: 3px;
+  background-position: -15px -854px;
+}
+
 .counter::after {
   content: "";
   position: absolute;
@@ -671,6 +671,18 @@ body {
   width: 11px;
   height: 11px;
   background-position: -15px -887px;
+}
+
+.counter:hover:after {
+  width: 11px;
+  height: 11px;
+  background-position: -15px -928px;
+}
+
+.counter:active:after {
+  width: 11px;
+  height: 11px;
+  background-position: -15px -969px;
 }
 
 .btn {
@@ -710,6 +722,14 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   box-sizing: border-box;
+}
+
+.find:hover {
+  background-color: #669ec0;
+}
+
+.find:active {
+  color: rgba(255,255,255,0.3);
 }
 
 .btn {
@@ -759,6 +779,10 @@ body {
   box-sizing: border-box;
 }
 
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
 .social-btn::before {
   content: "";
   position: absolute;
@@ -767,6 +791,10 @@ body {
   left: 50%;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
+}
+
+.social-btn:active:before {
+  opacity: 0.3;
 }
 
 .social-btn-tw::before {
@@ -818,6 +846,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.btn-html:hover:before {
+  width: 113px;
+  height: 39px;
+  background-position: -15px -650px;
+}
+
+.btn-html:active:before {
+  width: 113px;
+  height: 39px;
+  background-position: -15px -719px;
+}
+
 /* hotel SEDONA */
 
 .main-images-hotel {
@@ -858,21 +898,8 @@ body {
 }
 
 .accommodation{
-  margin-right: 287px;
+  margin-right: 285px;
 }
-
-
-
-
-
-
-/* сложная форма */
-
-
-
-
-
-
 
 .checkbox-input {
   display:none;
@@ -899,6 +926,13 @@ body {
   width: 26px;
   height: 22px;
   background-position: -15px -171px;
+  cursor: pointer;
+}
+
+.checked:disabled:before {
+  width: 26px;
+  height: 22px;
+  background-position: -15px -223px;
 }
 
 .no-checked {
@@ -915,6 +949,128 @@ body {
   width: 22px;
   height: 22px;
   background-position: -15px -327px;
+}
+
+.no-checked:disabled:before {
+  width: 22px;
+  height: 22px;
+  background-position: -15px -379px;
+}
+
+.filter-range {
+  width: 319px;
+}
+
+.for-price {
+  margin-bottom: 8px;
+}
+
+.price-controls {
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.price-controls::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls .max-price {
+  padding-left: 56px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.btn-transparent {
+  display: block;
+  width: 137px;
+  min-height: 36px;
+  margin-left: 85px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
 }
 
 .form-result {
@@ -988,17 +1144,27 @@ body {
   margin-right: 40px;
 }
 
-.price {
+.price.active {
   color: #81b3d2;
   margin-right: 33px;
 }
 
-.type, .rating {
+.type-rating {
   color: #000000;
   border-bottom: 1px dotted #81b3d2;
   opacity: 0.3;
   line-height: 12px;
   margin-right: 33px;
+  cursor: pointer;
+}
+
+.type-rating:hover {
+  color: #81b3d2;
+}
+
+.type-rating:active {
+  color: #000000;
+  border: none;
 }
 
 .hotels {
@@ -1095,6 +1261,14 @@ body {
   box-sizing: border-box;
 }
 
+.hotel-name:hover {
+  color: #81b3d2;
+}
+
+.hotel-name:active {
+  color: rgba(0,0,0,0.3);
+}
+
 .features-description {
   display: flex;
   align-items: center;
@@ -1127,14 +1301,33 @@ body {
   color: #ffffff;
   text-decoration: none;
   padding: 3px 17px;
+  cursor: pointer;
 }
 
 .more-information {
   background-color: #81b3d2;
 }
 
+.more-information:hover {
+  background-color: #669ec0;
+}
+
+.more-information:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+
 .booking {
   background-color: #766357;
+}
+
+.booking:hover {
+  background-color: #604e43;
+}
+
+.booking:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3)
 }
 
 .rating-value {
@@ -1146,29 +1339,7 @@ body {
   margin-top: 64px;
   box-sizing: border-box;
 }
- /* Звезды решил псевдоэлементами сделать
-.hotels::after {
 
-  position: absolute;
-  width: 89px;
-  height: 17px;
-  background-image: url(../img/four-star.png);
-  top:0;
-  left: 0;
-}
-
-.star-3 {
-  width: 65px;
-  height: 17px;
-  background-image: url(../img/three-star.png);
-}
-
-.star-2 {
-  width: 42px;
-  height: 17px;
-  background-image: url(../img/two-star.png);
-}
- */
  .second-footer {
    background-color: #fefefe;
  }

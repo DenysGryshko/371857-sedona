@@ -16,7 +16,7 @@
           </a>
           <ul>
             <li>
-              <a href="#" class="menu-point first">Информация</a>
+              <a href="#" class="menu-point first active">Информация</a>
             </li>
             <li>
               <a href="#" class="menu-point second">Фото и видео</a>
@@ -52,10 +52,20 @@
           <label class="checkbox-name checked" class="checkbox-name" for="accommodation-form-3"> Апартаменты </label>
           <input class="checkbox-input" id="accommodation-form-3" name="apartments" type="checkbox" checked>
           </div>
-          <div class="column-form price">
-          <h2 class="title-form">Стоимость в сутки (р):</h2>
-
-          <button class="btn" type="submit">Показать</button>
+          <div class="filter-range">
+          <h2 class="title-form for-price">Стоимость в сутки (р):</h2>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
           </div>
         </form>
       </section>
@@ -65,8 +75,8 @@
       <h2 class="found header-number"> Найдено: 3 </h2>
       <span class="caption"> Сортировка: </span>
       <span class="sorting price active"> По цене </span>
-      <span class="sorting type"> По типу </span>
-      <span class="sorting rating"> По рейтингу: </span>
+      <span class="sorting type-rating"> По типу </span>
+      <span class="sorting type-rating"> По рейтингу: </span>
     </div>
     <div class="hotels">
       <div class="hotel-item">

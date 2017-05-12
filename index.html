@@ -120,24 +120,26 @@
       <div class="form-block">
         <form class="booking-form" method="get" action="/">
           <div class="row">
-          <label class="label" for="arrival-date"> Дата заезда:</label>
+          <label class="label label-arrival-date" for="arrival-date"> Дата заезда:</label>
+          <div class="calendar-icon calendar-icon-1"></div>
           <input id="arrival-date" class="calendar" name="arrival" type="text"
           value="24 апреля 2017">
           </div>
           <div class="row departure">
-          <label class="label" for="departure-date"> Дата выезда:</label>
+          <label class="label label-departure-date" for="departure-date"> Дата выезда:</label>
+          <div class="calendar-icon calendar-icon-2"></div>
           <input id="departure-date" class="calendar" name="departure" type="text"
           value="4 июля 2017">
           </div>
           <div class="row amount">
           <div class="adult"> Взрослые:</div>
-            <div class="counter"><button class="btn" type="button"> - </button>
+            <div class="counter counter-1"><button class="btn minus" type="button"> - </button>
             <input id="adult" class="plus-minus" name="adult-number" type="text" value="2">
-            <button class="btn" type="button"> + </button></div>
+            <button class="btn plus" type="button"> + </button></div>
           <div class="children"> Дети:</div>
-            <div class="counter"><button class="btn" type="button"> -  </button>
+            <div class="counter counter-2"><button class="btn minus" type="button"> -  </button>
             <input id="children" class="plus-minus" name="children-number" type="text" value="0">
-            <button class="btn" type="button"> + </button></div>
+            <button class="btn plus" type="button"> + </button></div>
           </div>
           <input class="find" type="submit" name="btn-find" value="Найти">
         </form>

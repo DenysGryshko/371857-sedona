@@ -13,6 +13,7 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   background: #f2f2f2;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sprite {
@@ -160,7 +161,6 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 .main-navigation{
@@ -609,6 +609,7 @@ body {
   z-index: 5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+          position: relative;
 }
 
 .row {
@@ -671,11 +672,10 @@ body {
   cursor: pointer;
 }
 
-.label::before {
-  content: "";
+.calendar-icon {
   position: absolute;
-  top: 2px;
-  right: -357px;
+  top: 63px;
+  right: 62px;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 21px;
@@ -684,13 +684,18 @@ body {
   cursor: pointer;
 }
 
-.label:hover:before {
+.calendar-icon-2 {
+  top: 130px;
+  right: 62px;
+}
+
+.calendar-icon:hover {
   width: 21px;
   height: 22px;
   background-position: -15px -67px;
 }
 
-.label:active:before {
+.calendar-icon:active {
   width: 21px;
   height: 22px;
   background-position: -15px -119px;
@@ -707,6 +712,7 @@ body {
   width: 75px;
   min-height: 30px;
   margin-right: 38px;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -732,7 +738,7 @@ body {
           box-sizing: border-box;
 }
 
-.counter::before {
+.counter-1::before {
   content: "";
   position: absolute;
   top: 16px;
@@ -744,23 +750,47 @@ body {
   background-position: -15px -788px;
 }
 
-.counter:hover:before {
+.counter-1:hover:before {
   width: 12px;
   height: 3px;
   background-position: -15px -821px;
 }
 
-.counter:active:before {
+.counter-1:active:before {
   width: 12px;
   height: 3px;
   background-position: -15px -854px;
 }
 
-.counter::after {
+.counter-2::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 3px;
+  background-position: -15px -788px;
+}
+
+.counter-2:hover:before {
+  width: 12px;
+  height: 3px;
+  background-position: -15px -821px;
+}
+
+.counter-2:active:before {
+  width: 12px;
+  height: 3px;
+  background-position: -15px -854px;
+}
+
+.counter-1::after {
   content: "";
   position: absolute;
   top: 12px;
-  left: 90px;
+  left: 87px;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 11px;
@@ -768,13 +798,37 @@ body {
   background-position: -15px -887px;
 }
 
-.counter:hover:after {
+.counter-1:hover:after {
   width: 11px;
   height: 11px;
   background-position: -15px -928px;
 }
 
-.counter:active:after {
+.counter-1:active:after {
+  width: 11px;
+  height: 11px;
+  background-position: -15px -969px;
+}
+
+.counter-2::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 86px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 11px;
+  background-position: -15px -887px;
+}
+
+.counter-2:hover:after {
+  width: 11px;
+  height: 11px;
+  background-position: -15px -928px;
+}
+
+.counter-2:active:after {
   width: 11px;
   height: 11px;
   background-position: -15px -969px;
@@ -790,6 +844,11 @@ body {
   border: none;
   width: 38px;
   height: 38px;
+  min-height: 38px;
+  margin-left: 16px;
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .plus-minus {
@@ -815,6 +874,7 @@ body {
   line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
   color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -826,15 +886,6 @@ body {
 
 .find:active {
   color: rgba(255,255,255,0.3);
-}
-
-.btn {
-  width: 38px;
-  min-height: 38px;
-  margin-left: 16px;
-  font-size: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .main-footer-flex {
@@ -957,21 +1008,15 @@ body {
   left: 50%;
   width: 113px;
   height: 39px;
-  background-image: url(../img/sprite.png);
-  background-position: -15px -581px;
-  background-repeat: no-repeat;
+  background: #fcfcfb url(../img/html-index.png);
 }
 
 .btn-html:hover:before {
-  width: 113px;
-  height: 39px;
-  background-position: -15px -650px;
+  background-image: url(../img/html-index-pointing.png);
 }
 
 .btn-html:active:before {
-  width: 113px;
-  height: 39px;
-  background-position: -15px -719px;
+  background-image: url(../img/html-index-press.png);
 }
 
 /* hotel SEDONA */
@@ -1431,6 +1476,7 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

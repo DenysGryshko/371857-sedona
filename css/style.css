@@ -142,6 +142,7 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-navigation{
@@ -262,7 +263,7 @@ body {
   width: 605px;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -349,7 +350,7 @@ body {
   height: 2px;
   background: #bcd6e7;
   top: 26px;
-  left: 8px;
+  left: 126px;
 }
 
 .number-adventures::after {
@@ -359,11 +360,35 @@ body {
   height: 2px;
   background: #bcd6e7;
   top: 26px;
-  left: 49px;
+  left: 167px;
+}
+
+.number-adventures.black {
+  position: relative;
+}
+
+.number-adventures.black::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #bcd6e7;
+  top: 26px;
+  left: 7px;
+}
+
+.number-adventures.black::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #bcd6e7;
+  top: 26px;
+  left: 48px;
 }
 
 .text-adventures {
-  width: 310px;
+  width: 279px;
   margin: 0px;
   padding-top: 21px;
   font-size: 14px;
@@ -375,10 +400,15 @@ body {
   box-sizing: border-box;
 }
 
+.white {
+  width: 301px;
+}
+
 .adventures-image-1 {
-  width:800px;
+  width: 66%;
   min-height: 255px;
-  background-image: url(../img/view-11.jpg);
+  background: url(../img/view1.jpg)  no-repeat;
+  background-position: 0 -78px;
 }
 
 .features {
@@ -420,10 +450,14 @@ body {
 
 .building {
   background: #ffffff url(../img/building.png) no-repeat;
+  top: 60px;
+  right: 163px;
 }
 
 .burger {
   background: #ffffff url(../img/burger.png) no-repeat;
+  top: 62px;
+  right: 161px;
 }
 
 .gift {
@@ -471,9 +505,10 @@ body {
 }
 
 .adventures-image-2 {
-  width:800px;
+  width: 800px;
   min-height: 256px;
-  background-image: url(../img/view-22.jpg);
+  background-image: url(../img/view2.jpg);
+  background-position: 0 -76px;
 }
 
 .adveture-block {
@@ -600,7 +635,7 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -650,8 +685,10 @@ body {
 }
 
 .label {
+  width: 114px;
   position: relative;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .calendar-icon {
@@ -683,45 +720,38 @@ body {
   background-position: -15px -119px;
 }
 
-.amount {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  position: relative;
-}
-
 .adult {
+  display: inline-block;
   width: 75px;
   min-height: 30px;
-  margin-right: 38px;
+  margin-right: 37px;
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .children {
+  display: inline-block;
   width: 45px;
   min-height: 30px;
-  margin-right: 26px;
+  margin-left: 52px;
+  margin-right: 19px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .counter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
+  font-size: 0;
   width: 114px;
-  min-height: 38px;
+  height: 38px;
   background-color: #f2f2f2;
-  margin-right: 54px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .btn {
   display: inline-block;
-  vertical-align: top;
+  font-size: 0;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -729,9 +759,6 @@ body {
   border: none;
   width: 38px;
   height: 38px;
-  min-height: 38px;
-  margin-left: 16px;
-  font-size: 0;
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -742,7 +769,7 @@ body {
   content: "";
   position: absolute;
   top: 16px;
-  left: -3px;
+  left: 16px;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 12px;
@@ -766,7 +793,7 @@ body {
   content: "";
   position: absolute;
   top: 12px;
-  left: -2px;
+  left: 16px;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 11px;
@@ -775,6 +802,8 @@ body {
 }
 
 .plus:hover:after {
+  display: inline-block;
+  font-size: 0;
   width: 11px;
   height: 11px;
   background-position: -15px -928px;
@@ -789,6 +818,8 @@ body {
 .plus-minus {
   display: inline-block;
   vertical-align: top;
+  width: 38px;
+  height: 38px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -803,6 +834,7 @@ body {
   width: 458px;
   min-height: 58px;
   margin-top: 52px;
+  margin-left: 5px;
   border: none;
   background-color: #81b3d2;
   font-size: 21px;
@@ -823,15 +855,14 @@ body {
   color: rgba(255,255,255,0.3);
 }
 
+.main-footer{
+  overflow: hidden;
+}
+
 .main-footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #faf7f0;
   width: 1200px;
   min-height: 120px;
@@ -844,6 +875,7 @@ body {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin-top: 25px;
 }
 
 .footer-social {
@@ -859,6 +891,7 @@ body {
   font-size: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin-top: 36px;
 }
 
 .social-btn {
@@ -923,6 +956,7 @@ body {
   width: 195px;
   min-height: 50px;
   margin-right: auto;
+  margin-top: 33px;
 }
 
 .btn-html {
@@ -1084,7 +1118,8 @@ body {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 14px;
+  padding-top: 8px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -1100,6 +1135,7 @@ body {
 }
 
 .price-controls input {
+  display: inline-block;
   width: 50px;
   margin: 0;
   color: inherit;
@@ -1221,6 +1257,7 @@ body {
   font-weight: normal;
   color: #000000;
   margin-right: 40px;
+  cursor: pointer;
 }
 
 .price.active {
@@ -1234,7 +1271,6 @@ body {
   opacity: 0.3;
   line-height: 12px;
   margin-right: 33px;
-  cursor: pointer;
 }
 
 .type-rating:hover {
@@ -1245,7 +1281,6 @@ body {
   color: #000000;
   border: none;
 }
-
 
 .sort {
   font-size: 0;
@@ -1303,6 +1338,7 @@ body {
   width: 1200px;
   min-height: 454px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .hotel-item {
@@ -1311,12 +1347,17 @@ body {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   width: 1200px;
   min-height: 151px;
+  padding-top: 29px;
   border-bottom: 1px solid #e5e5e5;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.hotel-image, .hotel-features {
+  display: block;
 }
 
 .hotel-item:first-child {
@@ -1399,6 +1440,9 @@ body {
 }
 
 .hotel-name {
+  display: block;
+  font-size: 21px;
+  line-height: 22px;
   padding: 0;
   margin: 0;
   margin-bottom: 10px;

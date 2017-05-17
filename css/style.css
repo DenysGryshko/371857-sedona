@@ -142,7 +142,8 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-navigation{
@@ -317,7 +318,8 @@ body {
 }
 
 .label-adventures {
-  width: 305px;
+  display: block;
+  width: 151px;
   margin: 0px;
   padding-bottom: 8px;
   font-size: 21px;
@@ -330,10 +332,10 @@ body {
 }
 
 .number-adventures {
+  display: block;
   position:relative;
   width: 64px;
-  margin: 0px;
-  padding-top: 16px;
+  margin: auto;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -341,56 +343,35 @@ body {
   color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.number-adventures::after,
+.number-adventures::before {
+content: '';
+position: absolute;
+top: 12px;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+display: block;
+width: 10px;
+height: 2px;
+background: #bcd6e7;
 }
 
 .number-adventures::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #bcd6e7;
-  top: 26px;
-  left: 126px;
-}
-
-.number-adventures::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #bcd6e7;
-  top: 26px;
-  left: 167px;
-}
-
-.number-adventures.black {
-  position: relative;
-}
-
-.number-adventures.black::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #bcd6e7;
-  top: 26px;
   left: 7px;
 }
 
-.number-adventures.black::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 2px;
-  background: #bcd6e7;
-  top: 26px;
-  left: 48px;
+.number-adventures::after {
+  right: 5px;
 }
 
 .text-adventures {
-  width: 279px;
+  display: block;
+  width: 305px;
   margin: 0px;
-  padding-top: 21px;
+  margin-top: 7px;
+  margin-bottom: 61px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -398,10 +379,6 @@ body {
   color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.white {
-  width: 301px;
 }
 
 .adventures-image-1 {
@@ -423,16 +400,6 @@ body {
 }
 
 .features-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   position: relative;
   width: 400px;
   min-height: 330px;
@@ -467,9 +434,10 @@ body {
 }
 
 .subtitle {
+  display: block;
   width: 305px;
-  margin: 0px;
-  padding-top: 30px;
+  margin-top: 28px;
+  margin-left: 48px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -480,9 +448,9 @@ body {
 }
 
 .features-motto {
-  width: 305px;
-  margin: 0px;
-  padding-top: 25px;
+  width: 303px;
+  margin-top: 24px;
+  margin-left: 48px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -529,6 +497,10 @@ body {
   color: #000000;
 }
 
+.text-adventures.black {
+  width: 280px;
+}
+
 .question {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,9 +525,10 @@ body {
 }
 
 .question-headline {
+  display: block;
   width: 475px;
   margin-top: 55px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 30px;
   line-height: 30px;
@@ -566,8 +539,8 @@ body {
 }
 
 .question-description {
+  display: block;
   width: 475px;
-  margin-bottom: 46px;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
@@ -575,6 +548,13 @@ body {
   text-align: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.question-description-2 {
+  width: 475px;
+  margin-bottom: 46px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form-title {
@@ -685,10 +665,12 @@ body {
 }
 
 .label {
+  display: block;
   width: 114px;
   position: relative;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .calendar-icon {
@@ -746,7 +728,8 @@ body {
   width: 114px;
   height: 38px;
   background-color: #f2f2f2;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn {
@@ -860,15 +843,21 @@ body {
 }
 
 .main-footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-shrink: 0;
-  align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: #faf7f0;
   width: 1200px;
   min-height: 120px;
 }
 
 .footer-teg {
+  display: block;
   width: 140px;
   margin-left: 133px;
   margin-right: 249px;
@@ -1042,6 +1031,7 @@ body {
 }
 
 .checkbox-name {
+  display: block;
   padding-left: 41px;
   margin-bottom: 25px;
   cursor: pointer;
@@ -1338,7 +1328,8 @@ body {
   width: 1200px;
   min-height: 454px;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .hotel-item {
